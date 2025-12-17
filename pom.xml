@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ai.novasuite.demo</groupId>
   <artifactId>vaadin-meal-plan</artifactId>
   <version>0.0.2</version>
+  <packaging>jar</packaging>
   <name>vaadin-meal-plan</name>
+
+  <!-- ✅ WICHTIG -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.5</version>
+    <relativePath/>
+  </parent>
 
   <properties>
     <java.version>21</java.version>
-    <spring-boot.version>3.2.5</spring-boot.version>
     <vaadin.version>24.4.9</vaadin.version>
   </properties>
 
-  <!-- Versionen zentral -->
+  <!-- ✅ Vaadin BOM -->
   <dependencyManagement>
     <dependencies>
-      <!-- Vaadin BOM -->
       <dependency>
         <groupId>com.vaadin</groupId>
         <artifactId>vaadin-bom</artifactId>
@@ -26,38 +35,30 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-      <!-- Spring Boot BOM -->
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring-boot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
-    <!-- Vaadin + Spring Boot -->
+
+    <!-- Spring Boot + Vaadin -->
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-spring-boot-starter</artifactId>
     </dependency>
 
-    <!-- Web (REST / Servlet) -->
+    <!-- Web -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-    <!-- JPA / Hibernate -->
+    <!-- JPA -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- PostgreSQL-Treiber -->
+    <!-- PostgreSQL -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
@@ -70,28 +71,34 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
-      <!-- Spring Boot Plugin -->
+
+      <!-- ✅ DAS IST DER GAMECHANGER -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
-      <!-- Java 21 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-          <release>${java.version}</release>
+          <release>21</release>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
+
 </project>
