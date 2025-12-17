@@ -26,7 +26,7 @@ public class RecipeService {
         return repo.findById(id);
     }
 
-    public void delete(Long id) {
-        repo.deleteById(id);
+    public void delete(Recipe r) {
+        repo.delete(r);
     }
 }

@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "C:/Users/Heart/Documents/vaadin-meal-plan/vaadin-meal-plan/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/Users/Heart/Documents/vaadin-meal-plan/vaadin-meal-plan/./frontend/generated/jar-resources",
+  "staticOutput": "C:/Users/Heart/Documents/vaadin-meal-plan/vaadin-meal-plan/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\Users\\Heart\\Documents\\vaadin-meal-plan\\vaadin-meal-plan\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\Users\\Heart\\Documents\\vaadin-meal-plan\\vaadin-meal-plan\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/Users/Heart/Documents/vaadin-meal-plan/vaadin-meal-plan/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/Users/Heart/Documents/vaadin-meal-plan/vaadin-meal-plan/target/dev-bundle/config",
+  "jarResourcesFolder": "C:/Users/Heart/Documents/vaadin-meal-plan/vaadin-meal-plan/./frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "C:\\Users\\Heart\\Documents\\vaadin-meal-plan\\vaadin-meal-plan\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

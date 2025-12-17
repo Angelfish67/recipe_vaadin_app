@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Neues Rezept")
 
-@Route(value = "create", layout = MainLayout.class) // MainLayout hast du ja schon
+@Route(value = "create", layout = MainLayout.class) 
 public class RecipeCreateView extends VerticalLayout {
 
     private final RecipeService recipeService;
