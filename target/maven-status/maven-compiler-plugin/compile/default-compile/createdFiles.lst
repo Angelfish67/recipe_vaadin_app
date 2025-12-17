@@ -1,0 +1,11 @@
+ai\novasuite\demo\ui\recipe\Recipe.class
+ai\novasuite\demo\ui\ShoppingListView.class
+ai\novasuite\demo\ui\HomeView.class
+ai\novasuite\demo\ui\recipe\RecipeRepository.class
+ai\novasuite\demo\ui\RecipeCreateView.class
+ai\novasuite\demo\ui\RecipeDetailView.class
+ai\novasuite\demo\ui\RecipeCard.class
+ai\novasuite\demo\Application.class
+ai\novasuite\demo\ui\RecipeDetailView$RecipeData.class
+ai\novasuite\demo\ui\MainLayout.class
+ai\novasuite\demo\ui\recipe\RecipeService.class
